@@ -43,7 +43,7 @@ def create_app(test_config=None):
 
     return render_template('sign_up.html')
 
-  @app.route('/log_in')
+  @app.route('/log_in', methods=('GET','POST'))
   def log_in():
     if request.method == 'POST':
       username = request.form['username']
