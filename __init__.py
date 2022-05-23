@@ -64,6 +64,12 @@ def create_app(test_config=None):
     
     return render_template('log_in.html')
 
+  @app.route('/log_out', methods=('GET','DELETE'))
+  def log_out():
+    session.clear()
+    flash('Successfully logged out.', 'success')
+    return redirect(url_for('log_in'))
+
   @app.route('/')
   def index():
     return 'Index'
