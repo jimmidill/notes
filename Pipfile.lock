@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5ac2899e5185f95d2c41cc0f17d9284abbaf9675d9f246ecd270b41dd5bff152"
+            "sha256": "8934d89bec0e251b17a728708b7da83dae1ea2fbba0dd4ecd8b21ddf407b1047"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -119,11 +119,11 @@
         },
         "importlib-metadata": {
             "hashes": [
-                "sha256:1208431ca90a8cca1a6b8af391bb53c1a2db74e5d1cef6ddced95d4b2062edc6",
-                "sha256:ea4c597ebf37142f827b8f39299579e31685c31d3a438b59f469406afd0f2539"
+                "sha256:5d26852efe48c0a32b0509ffbc583fda1a2266545a78d104a6f4aff3db17d700",
+                "sha256:c58c8eb8a762858f49e18436ff552e83914778e50e9d2f1660535ffb364552ec"
             ],
             "markers": "python_version < '3.10'",
-            "version": "==4.11.3"
+            "version": "==4.11.4"
         },
         "importlib-resources": {
             "hashes": [
@@ -202,6 +202,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.1.1"
+        },
+        "mistune": {
+            "hashes": [
+                "sha256:6bab6c6abd711c4604206c7d8cad5cd48b28f072b4bb75797d74146ba393a049",
+                "sha256:6fc88c3cb49dba8b16687b41725e661cf85784c12e8974a29b9d336dd596c3a1"
+            ],
+            "index": "pypi",
+            "version": "==2.0.2"
         },
         "psycopg2-binary": {
             "hashes": [
