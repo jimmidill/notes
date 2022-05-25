@@ -80,7 +80,7 @@ def create_app(test_config=None):
       if error is None:
         session.clear()
         session['user_id'] = user.id 
-        return redirect(url_for('index'))
+        return redirect(url_for('note_index'))
 
       flash(error, 'error')
     
@@ -123,9 +123,6 @@ def create_app(test_config=None):
 
     return render_template('note_create.html')
 
-
-
-  
 
   @app.route('/notes/<note_id>/edit', methods=('GET', 'POST','PATCH'))
   @require_login
