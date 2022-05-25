@@ -124,20 +124,20 @@ def create_app(test_config=None):
     return render_template('note_create.html')
 
 
-  @app.route('/notes/<note_id>/edit', methods=('GET', 'POST','PATCH'))
+  @app.route('/notes/<note_id>/edit', methods=('GET', 'POST', 'PATCH', 'PUT'))
   @require_login
   def note_update(note_id):
     note = Note.query.filter_by(user_id=g.user.id, id=note_id).first_or_404()
   
-    if request.method in ['POST', 'PATCH']:
+    if request.method in ['POST', 'PATCH', 'PUT']:
       title = request.form['title']
       body = request.form['body']
-      error  = None
+      error = None
 
       if not title:
         error = 'Title is required'
 
-      if not error:
+      if error is None:
         note.title = title 
         note.body = body
         db.session.add(note)
